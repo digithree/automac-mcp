@@ -1,0 +1,28 @@
+[project]
+name = "automac-mcp"
+version = "0.1.0"
+description = "AutoMac MCP - MCP server for macOS UI automation"
+authors = [
+    {name = "AutoMac MCP", email = "noreply@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.9.0",
+    "pyautogui>=0.9.54",
+    "pyobjc-framework-Quartz>=11.1",
+    "pyobjc-framework-Cocoa>=11.1",
+    "pyobjc-framework-ApplicationServices>=11.1",
+    "easyocr>=1.7.0",
+    "numpy>=1.21.0",
+]
+
+[project.scripts]
+automac-mcp = "automac_mcp:main"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["automac_mcp"]
